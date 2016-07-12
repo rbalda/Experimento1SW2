@@ -1,34 +1,41 @@
-from django.test import TestCase
+import unittest 
+from prestamo import Prestamo
 
-# Create your tests here.
-from capital import Prestamo
 
-# Creando casos de prueba
-class CrearPrestamo(TestCase):
+class prestamo(unittest.TestCase):
+    """ PRUEBA 1
+    clase de equivalencia
+    prestamo menor a 5000 y tiempo = 3"""
+    def crear_prestamo(self):
+        persona1=Prestamo()
+        persona1.valor_total(2000, 3)
+    
 
-	def crear_prestamo(self):
-		self.prestamo = Prestamo()
+class prestamo2(unittest.TestCase):
+    """ PRUEBA 2
+    clase de equivalencia
+    prestamo IGUAL a 5000 y tiempo = 6"""
+    def crear_prestamo(self):
+        persona2=Prestamo()
+        persona2.valor_total(5000, 3)
 
-	def test_prestamo_inferior_a_5000_mes_invalido(self):
-		total = self.crear_prestamo().valor_total(2000, 4)
-		self.assertTrue(total, 2080.8)
+class prestamo3(unittest.TestCase):
+    """ PRUEBA 3
+    clase de equivalencia
+    prestamo entre 5000 y 9999,99 y tiempo 6"""
+    def crear_prestamo(self):
+        persona3=Prestamo()
+        persona3.valor_total(5001, 6)
 
-	def test_prestamo_inferior_a_5000_mes_valido(self):
-		total = self.crear_prestamo().valor_total(2000, 3)
-		self.assertTrue(total, 2101.2)
+class prestamo4(unittest.TestCase):
+""" PRUEBA 4
+clase de equivalencia
+prestamo entre 5000 y 9999,99 y tiempo 6"""
+    def crear_prestamo(self):
+        persona4=Prestamo()
+        persona4.valor_total(7000, 6)
 
-	def test_prestamo_entre_5000_mes_invalido(self):
-		total = self.crear_prestamo().valor_total(5000, 7)
-		self.assertTrue(total, None)
 
-	def test_prestamo_entre_10000_mes_invalido(self):
-		total = self.crear_prestamo().valor_total(10000, 14)
-		self.assertTrue(total, None)
 
-    def test_prestamo_entre_10000_mes_valido(self):
-		total = self.crear_prestamo().valor_total(10000, 12)
-		self.assertTrue(total, 12272.0)
 
-	def test_prestamo_mayor_20000(self):
-		total = self.crear_prestamo().valor_total(21000, 1)
-		self.assertTrue(total, None)
+
