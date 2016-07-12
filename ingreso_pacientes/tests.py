@@ -1,7 +1,7 @@
 from django.test import TestCase
 
 # Create your tests here.
-from capital import Prestamo
+from ingreso_pacientes.models import Prestamo
 
 # Creando casos de prueba
 class CrearPrestamo(TestCase):
