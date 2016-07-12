@@ -5,5 +5,10 @@ python:
 before_install:
   - pip install -r requirements.txt
 
+
+script:
+  - python prueba.py
+
+
 after_script:
   coveralls
