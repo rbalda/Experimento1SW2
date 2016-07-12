@@ -13,6 +13,9 @@ class TestFinanciero(unittest.TestCase):
 
     def test_1_5(self):
         self.assertEqual(self.prestamo.valor_total(15000,6), 17004.0)
+        
+    def test_1_25(self):
+        self.assertEqual(self.prestamo.valor_total(6000,15), None)
 
 if __name__ == '__main__':
 	unittest.main()
