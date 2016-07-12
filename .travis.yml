@@ -8,7 +8,7 @@ before_install:
 
 script:
   - python prueba.py
-  - coverage prueba.py
+  - coverage prueba.py test
 
 
 after_script:
