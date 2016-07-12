@@ -5,7 +5,7 @@ python:
 before_install: "pip2 install -r requirements.txt"
 
 script: 
-  - "coverage run --source=tests  test tests.py"
+  - "python -m coverage run tests/tests.py"
 
 after_script:
 - "coveralls"
