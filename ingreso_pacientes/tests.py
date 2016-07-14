@@ -1,4 +1,4 @@
-import unittest 
+import unittest
 from prestamo import Prestamo
 
 
@@ -9,7 +9,7 @@ class prestamo(unittest.TestCase):
     def crear_prestamo(self):
         persona1=Prestamo()
         persona1.valor_total(2000, 3)
-    
+
 
 class prestamo2(unittest.TestCase):
     """ PRUEBA 2
@@ -28,14 +28,9 @@ class prestamo3(unittest.TestCase):
         persona3.valor_total(5001, 6)
 
 class prestamo4(unittest.TestCase):
-""" PRUEBA 4
-clase de equivalencia
-prestamo entre 5000 y 9999,99 y tiempo 6"""
+    """ PRUEBA 4
+    clase de equivalencia
+    prestamo entre 5000 y 9999,99 y tiempo 6"""
     def crear_prestamo(self):
         persona4=Prestamo()
         persona4.valor_total(7000, 6)
-
-
-
-
-
