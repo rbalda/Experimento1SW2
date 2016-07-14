@@ -5,7 +5,7 @@ class SimpleTestCase(unittest.TestCase):
     def setUp(self):
         """Call before every test case."""
         self.prestamo = Prestamo()
-    
+
     def testA(self):
         #Prueba ejemplo de la hoja
         assert Prestamo.valor_total(self, 2000, 2) == 2080.8
@@ -24,8 +24,7 @@ class SimpleTestCase(unittest.TestCase):
 
     def testE(self):
         #Prueba con capital mayor a 20000, 5 meses
-        assert Prestamo.valor_total(self, 20001, 5) == "El banco no puede otorgar dicho prestamo ya que excede al monto definido"
+        assert Prestamo.valor_total(self, 20001, 5) == None
 
 if __name__ == "__main__":
     unittest.main()
-    
