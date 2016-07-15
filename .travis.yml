@@ -3,6 +3,6 @@ python:
   - "2.7"
 before_install: "pip install -r requeriments.txt"
 
-script: "coverage run --source=deberEnriquez manage.py test SimpleTestCase"
+script: "python -m coverage run deberEnriquez/SimpleTestCase.py"
 
 after_script: "coveralls"
