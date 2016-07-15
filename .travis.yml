@@ -5,7 +5,7 @@ python:
 install: "pip install -r requirements.txt"
 
 script:
-  - python -m coverage run Files/tests.py
+  - python -m coverage run Files/test.py
 
 after_script:
 - "coveralls"
