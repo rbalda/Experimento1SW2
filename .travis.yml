@@ -2,10 +2,10 @@ language: python
 python:
   - "2.7"
 
-before_install: "pip install -r requeriments.txt"
+before_install: "pip install -r requirements.txt"
 
 script:
-  - "coverage run --source=tests test tests.py"
+  - "python -m coverage tests/tests.py"
 
 after_script:
   - "coveralls"
