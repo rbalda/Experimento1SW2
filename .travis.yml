@@ -4,10 +4,8 @@ python:
 
 before_install: "pip install -r requirements.txt"
 
-script: 
-  - "coverage run --source=ingreso_pacientes manage.py test ingreso_pacientes"
+script:
+  - "coverage run --source=prestamo manage.py test prestamo"
 
 after_script:
   - "coveralls"
- 
- 
