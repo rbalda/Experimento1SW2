@@ -1,12 +1,6 @@
 
 class Prestamo():
-	"""
-	Autor: Erika Narv�ez
-	Nombre de funci�n: valor_total
-	Entrada: valor del prestamo, y tiempo de plazo
-	Salida: capital total a devolver al banco
-	Descripci�n: Funci�n que realiza los respectivos calculos para obtener el valor a pagar del prestamo pedido en un tiempo plazo.
-	"""
+	
 	def valor_total(self,prestamo,tiempo):
 		if(tiempo<=0 or tiempo>12):
 				return None
