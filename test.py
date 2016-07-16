@@ -28,3 +28,7 @@ class pruebas(unittest.TestCase):
         valor1 = round(prestamo.valor_total(9999.99, 2), 2)
         valor2 = 10557.49
         self.assertEqual(valor1, valor2)
+
+
+if __name__ == '__main__':
+    unittest.main() 
