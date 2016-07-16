@@ -7,7 +7,7 @@ before_install:
 
 
 script:
-  - "coverage run -x banco.py"
+  - "python -m  coverage run banco.py"
 
 after_script:
-"coveralls"
+  "coveralls"
