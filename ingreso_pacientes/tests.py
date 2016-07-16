@@ -25,7 +25,7 @@ class CrearPrestamo(TestCase):
 		total = self.crear_prestamo().valor_total(10000, 14)
 		self.assertTrue(total, None)
 
-    def test_prestamo_entre_10000_mes_valido(self):
+	def test_prestamo_entre_10000_mes_valido(self):
 		total = self.crear_prestamo().valor_total(10000, 12)
 		self.assertTrue(total, 12272.0)
 
