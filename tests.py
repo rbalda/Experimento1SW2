@@ -3,7 +3,7 @@ import unittest
 from prestamo import Prestamo
 
 
-class prestamoTest(unittest.TestCase):
+class prestamoTestCase(unittest.TestCase):
 
     def test_calcular_valor1(self):
         self.prestamo = Prestamo.objects.create(4000,3)
