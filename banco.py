@@ -37,6 +37,12 @@ class AddTest(unittest.TestCase):
 
 	def test_prestamo_positivo_valor_total(self):
 		self.assertEqual(self.prestamo.valor_total(2000,2), 2080.8)
+		
+	def test_prestamo_5008_valor_total(self):
+		self.assertEqual(self.prestamo.valor_total(5008,2), 5287.196)
+	
+	def test_prestamo_12008_valor_total(self):
+		self.assertEqual(self.prestamo.valor_total(12008,2), 12862.9696)
 
 	def test_prestamo_excede_valor_total(self):
 		self.assertEqual(self.prestamo.valor_total(22000,6), None)
