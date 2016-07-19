@@ -5,10 +5,13 @@ from prestamo import Prestamo
 
 class prestamoTestCase(unittest.TestCase):
 
+    def setUp(self):
+        self.prestamo = Prestamo()
+
     def test_calcular_valor1(self):
         self.prestamo = Prestamo.objects.create(4000,3)
         self.calcularValor()
-        self.assertIsInstance(self.prestamo,Prestamo)
+        self.assertEquals(self.prestamo.valor_total(4000,3),Prestamo)
 
     def test_calcular_valor2(self):
         self.prestamo = Prestamo.objects.create(6000,6)
@@ -36,7 +39,8 @@ class prestamoTestCase(unittest.TestCase):
         self.assertIsInstance(self.prestamo,Prestamo)
 
 
-
+if __name__ == "__main__":
+    unittest.main()
 
 
 
