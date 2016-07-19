@@ -1,7 +1,6 @@
+import prestamo
 import unittest
 from unittest import TestCase
-
-from Experimento1SW2.prestamo import Prestamo
 
 
 class TestPrestamo(TestCase):
