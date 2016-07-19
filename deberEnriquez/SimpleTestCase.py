@@ -1,5 +1,5 @@
 import unittest
-import Prestamo # code from module you're testing
+from deberEnriquez import Prestamo # code from module you're testing
 from django.test import TestCase
 
 
