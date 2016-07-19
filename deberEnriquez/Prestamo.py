@@ -16,6 +16,6 @@ class Prestamo():
                                 capital_total=float(prestamo+comision)
                                 interes=float(((capital_total*1.5)/100)*tiempo)
                                 return float(capital_total+interes)
-                if(prestamo > 20000 or prestamo < 0):
+                if(prestamo > 20000 or prestamo < 0 or tiempo < 0):
                                 print("El banco no puede otorgar dicho prestamo ya que excede al monto definido")
                                 return None
