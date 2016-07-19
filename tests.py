@@ -49,6 +49,10 @@ class CrearPrestamo(unittest.TestCase):
 		total = self.crear_prestamo().valor_total(5000, 7)
 		self.assertEqual(total, None, None)
 
+	def test_prestamo_entre_5000_mes_valido(self):
+		total = self.crear_prestamo().valor_total(5000, 4)
+		self.assertEqual(total, 5407.5, None)
+
 	def test_prestamo_entre_10000_mes_invalido(self):
 		total = self.crear_prestamo().valor_total(10000, 14)
 		self.assertEqual(total, None, None)
