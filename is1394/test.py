@@ -36,11 +36,7 @@ class PrestamoTest(unittest.TestCase):
             tiempo  = 2
             resultado esperado 2080.8
         """
-        result = None
-        try:
-            result = self.prestamo.valor_total(prestamo=2000,tiempo =2)
-        except:
-            print "Ops algo salio mal"
+        result = self.prestamo.valor_total(prestamo=2000,tiempo =2)
         assert result == 2080.8
 
     def test2(self):
@@ -50,11 +46,7 @@ class PrestamoTest(unittest.TestCase):
             tiempo  = 5
             resultado esperado 6566.25
         """
-        result = None
-        try:
-            result = self.prestamo.valor_total(prestamo=6000, tiempo=5)
-        except:
-            print "Oops algo salio mal"
+        result = self.prestamo.valor_total(prestamo=6000, tiempo=5)
         assert result == 6566.25
 
     def test3(self):
@@ -64,11 +56,7 @@ class PrestamoTest(unittest.TestCase):
             tiempo  = 10
             resultado esperado 13156.0
         """
-        result = None
-        try:
-            result = self.prestamo.valor_total(prestamo=11000, tiempo=10)
-        except:
-            print "Oops algo salio mal"
+        result = self.prestamo.valor_total(prestamo=11000, tiempo=10)
         assert result == 13156.0
 
     def test4(self):
@@ -78,11 +66,7 @@ class PrestamoTest(unittest.TestCase):
             tiempo  = 6
             resultado esperado None (El banco no puede otorgar dicho prestamo)
         """
-        result = None
-        try:
-            result = self.prestamo.valor_total(prestamo=22000, tiempo=6)
-        except:
-            print "Oops algo salio mal"
+        result = self.prestamo.valor_total(prestamo=22000, tiempo=6)
         assert result == None
 
     def test5(self):
@@ -92,11 +76,7 @@ class PrestamoTest(unittest.TestCase):
             tiempo  = 14
             resultado esperado None (El tiempo seleccionado no es el adecuado)
         """
-        result = None
-        try:
-            result = self.prestamo.valor_total(prestamo=4000, tiempo=14)
-        except:
-            print "Oops algo salio mal"
+        result = self.prestamo.valor_total(prestamo=4000, tiempo=14)
         assert result == None
 
     def test6(self):
@@ -106,11 +86,7 @@ class PrestamoTest(unittest.TestCase):
             tiempo  = 5
             resultado esperado None (El tiempo seleccionado no es el adecuado)
         """
-        result = None
-        try:
-            result = self.prestamo.valor_total(prestamo=-2000, tiempo=5)
-        except:
-            print "Oops algo salio mal"
+        result = self.prestamo.valor_total(prestamo=-2000, tiempo=5)
         assert result == None
 
 
