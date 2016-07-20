@@ -10,7 +10,7 @@ class Prestamo():
 	Descripcion: Funcion que realiza los respectivos calculos para obtener el valor a pagar del prestamo pedido en un tiempo plazo.
 	"""
 	def valor_total(self,prestamo,tiempo):
-		if(prestamo < 5000 and tiempo <= 3):
+		if(prestamo >= 0 and prestamo < 5000 and tiempo <= 3):
 			comision=(prestamo *2)/100
 			capital_total=float(prestamo+comision)
 			interes=float(((capital_total*1)/100)*tiempo)
