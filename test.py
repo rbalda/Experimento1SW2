@@ -18,5 +18,13 @@ class TestPrestamo(unittest.TestCase):
     	p = Prestamo()
     	""" mayor a 20000 """
         self.assertEqual(p.valor_total(30000, 2), None)
+    def test_valor5(self):
+    	p = Prestamo()
+    	""" Inferior a 5000 y tiempo inferior a 3 meses invalido """
+        self.assertTrue(p.valor_total(1000, 3), 1020)
+    def test_valor6(self):
+    	p = Prestamo()
+    	""" Entre 5000 y 9999.99 y tiempo inferior a 6 meses invalido """
+        self.assertTrue(p.valor_total(6000, 3), 6215.10)
 if __name__ == '__main__':
     unittest.main()
